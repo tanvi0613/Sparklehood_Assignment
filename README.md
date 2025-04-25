@@ -1,12 +1,72 @@
-# React + Vite
+# AI Safety Incident Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive dashboard for viewing and reporting AI safety incidents. This project was built as a take-home assignment for HumanChain's Frontend Intern position.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React (JavaScript framework)
+- CSS for styling (with responsive design)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Display a list of AI safety incidents with title, severity, and reported date
+- Filter incidents by severity (All, Low, Medium, High)
+- Sort incidents by reported date (newest first or oldest first)
+- Toggle incident details view
+- Form to report new incidents with validation
+- Responsive design that works on both desktop and mobile devices
+
+## How to Run
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Installation
+
+1. Unzip the project or clone the repository
+2. Navigate to the project directory in your terminal
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+### Running the Development Server
+
+```bash
+npm run dev
+```
+
+This will start the development server at [http://localhost:5173](http://localhost:5173). The page will reload when you make changes.
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This builds the app for production to the `build` folder.
+
+## Design Decisions
+
+- Used React's state management to handle incidents, filters, and sorting
+- Implemented responsive design to ensure usability on different device sizes
+- Organized the code into modular components for better maintainability
+- Used color coding for severity levels to provide visual cues
+- Added hover effects and transitions for a more interactive feel
+- Implemented form validation to ensure data quality
+
+## Project Structure
+
+```
+src/
+├── App.js              # Main application component
+├── App.css             # Main styles
+├── index.js            # Entry point
+├── components/
+│   ├── IncidentList.jsx    # Component for displaying incidents
+│   ├── IncidentForm.jsx    # Form component for adding new incidents
+│   └── FilterSort.jsx      # Component for filtering and sorting controls
+```
